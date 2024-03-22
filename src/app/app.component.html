@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="navegacao">
+    <div class="item menu">logo</div>
+    <div class="item">
+      <input type="search" name="" id="">
+    </div>
+    <div class="item perfil">
+      <button [matMenuTriggerFor]="menu" class="perfil">perfil</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>configurações</button>
+        <button mat-menu-item>Sair</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
