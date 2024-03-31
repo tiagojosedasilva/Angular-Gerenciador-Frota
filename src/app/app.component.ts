@@ -7,6 +7,7 @@ import { VeiculosComponent } from './modules/veiculos/veiculos.component';
 import { navbarData } from './nav-data';
 import { routes } from './app.routes';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class AppComponent implements OnInit {
   navData = navbarData;
-  visible = true;
+  visible = false;
 
   ngOnInit() {
   }
