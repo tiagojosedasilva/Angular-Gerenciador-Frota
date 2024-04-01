@@ -1,17 +1,17 @@
 <div class="container">
-   <u>
+   <u *ngFor="let usuario of usuarios | async">
       <li>
          <a href="" class="usuarios">
          <div>
                <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
          </div>
          <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
+               <p>{{usuario.nome}}</p>
+               <p>{{usuario.rg}}</p>
          </div>
          </a>
       </li>
-      <li>
+      <!-- <li>
          <a href="" class="usuarios">
             <div>
                <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
@@ -76,7 +76,7 @@
                <p>N CNH: 123456789</p>
             </div>
          </a>
-      </li>
+      </li> -->
     </u>
    </div>
    <div class="add">

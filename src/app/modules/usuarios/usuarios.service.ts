@@ -7,12 +7,14 @@ import { IUsuarios } from './IUsuarios';
 })
 export class UsuariosService {
 
+  url = "https://frothub.onrender.com/";
+
   constructor(private httpClient: HttpClient) {
     //console.log(httpClient)
   }
 
   obterTodos(){
-    return this.httpClient.get(`https://frothub.onrender.com/usuario`).toPromise()
+    return this.httpClient.get<any[]>(`${this.url}usuario`)
   }
 
 //   cadastrarCarro(carro: IUsuarios){

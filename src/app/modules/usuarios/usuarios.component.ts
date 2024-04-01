@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { UsuariosService } from './usuarios.service';
 import { IUsuarios } from './IUsuarios';
+import { error } from 'node:console';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-usuarios',
@@ -17,23 +19,20 @@ import { IUsuarios } from './IUsuarios';
 })
 export class UsuariosComponent implements OnInit {
 
-  usuarios: any;
+  usuarios = new Observable<IUsuarios[]>;
 
   constructor(
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
+    private httpClient: HttpClient
   ){}
 
-
   ngOnInit(): void {
-    this.obterTodos;
-    console.log(this.usuarios)
+    this.obterTodos();
   }
-  
 
-  async obterTodos(){
-    this.usuarios = await this.usuariosService.obterTodos().then((usuario: any) => {
-      return this.usuarios = usuario;
-    });
+  obterTodos(){
+    this.usuarios = this.usuariosService.obterTodos();
+    return this.usuarios;
   }
 }
 
