@@ -1,25 +1,20 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IUsuarios } from './IUsuarios';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
 
-  url = "https://frothub.onrender.com/";
-
   constructor(private httpClient: HttpClient) {
     //console.log(httpClient)
   }
 
   obterTodos(){
-    return this.httpClient.get<any[]>(`${this.url}usuario`)
+    return this.httpClient.get<IUsuarios[]>(`${environment.url}usuario`)
   }
-
-//   cadastrarCarro(carro: IUsuarios){
-//     return this.httpClient.post<IUsuarios>(`${environment}cars`, carro).toPromise()
-//   }
 
 //   excluirCarro(id: string){
 //     return this.httpClient.delete<IUsuarios>(`${environment}cars/${id}`).toPromise()

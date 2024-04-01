@@ -14,7 +14,7 @@ export interface IUsuarios{
     
     rg: string;
     
-    dataNascimento: Date;
+    dataNascimento: Date | null;
     
     celular: string;
     

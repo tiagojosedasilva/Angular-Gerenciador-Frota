@@ -8,6 +8,8 @@ import { navbarData } from './nav-data';
 import { routes } from './app.routes';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     RouterModule, // Use forChild for non-root modules
     FormsModule,
+    MatButtonModule, 
+    MatMenuModule,
     ReactiveFormsModule,
     UsuariosComponent,
     VeiculosComponent,
@@ -28,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 })
 export class AppComponent implements OnInit {
+[x: string]: any;
   navData = navbarData;
   visible = false;
 
