@@ -5,7 +5,7 @@
             <a href="" class="usuarios">
                <div >
                   <div>
-                     <mat-icon aria-hidden="true">face</mat-icon>
+                     <mat-icon aria-hidden="true">{{icone(usuario.genero)}}</mat-icon>
                   </div>
                   <div>
                      <p>{{usuario.nome}}</p>
@@ -15,7 +15,9 @@
             </a>
             <div class="buttons">
                <button class="button-edit">
-                  <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
+                  <a href="" [routerLink]="['editar-usuarios/', usuario.id]">
+                     <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
+                  </a>
                </button>
                <button class="button-delete">
                   <mat-icon aria-hidden="true" fontIcon="delete" (click)="excluirUsuario(usuario.id)"></mat-icon>
@@ -23,72 +25,6 @@
             </div>
          </div>
       </li>
-      <!-- <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li>
-      <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li>
-      <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li>
-      <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li>
-      <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li>
-      <li>
-         <a href="" class="usuarios">
-            <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
-            </div>
-            <div>
-               <p>Genival dos Santos</p>
-               <p>N CNH: 123456789</p>
-            </div>
-         </a>
-      </li> -->
     </u>
    </div>
    <div class="add">

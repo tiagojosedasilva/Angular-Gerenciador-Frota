@@ -39,5 +39,17 @@ export class UsuariosComponent implements OnInit {
     this.usuariosService.excluirUsuario(id)
     return this.obterTodos()
   }
+
+  icone(genero: string){
+    if (genero === "Masculino" || "masculino" || "M" || "m" || "homem" || "h") {
+      return "face"
+    }
+    else if(genero === "Feminino" || "feminino" || "F" || "f" || "mulher" || "m"){
+      return "tag_faces"
+    }
+    else{
+      return "tag_faces"
+    }
+  }
 }
 

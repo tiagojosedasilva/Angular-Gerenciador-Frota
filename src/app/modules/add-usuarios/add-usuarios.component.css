@@ -62,15 +62,24 @@ p{
     flex-wrap: wrap;
 }
 button{
+    color: #2A2B44;
     background-color: aliceblue;
     width: 100px;
     border: none;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
 }button:hover{
     background-color: rgb(161, 166, 170);
 }
-.submit{
+.submiter{
     width: 90%;
     display: flex;
     justify-content: end;
+    border: none;
+}
+.submiter button p{
+    margin-bottom: 5px;
 }

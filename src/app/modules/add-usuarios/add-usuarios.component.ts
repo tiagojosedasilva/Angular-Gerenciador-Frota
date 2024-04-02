@@ -48,10 +48,15 @@ export class AddUsuariosComponent {
     validade: ''
   };
 
-submit(){
-  console.log(this.usuario)
-  return this.addUsuarioService.cadastrarUsuario(this.usuario)
-    .subscribe(() => alert("cadastrado"))
-}
+  submit(){
+    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.celular == '' || this.usuario.rg == ''|| this.usuario.cpf == '' || this.usuario.cnh == '' ) {
+      alert("Por favor preencha os campos abaixo!")
+      return;
+    }
+
+    // console.log(this.usuario)
+    return this.addUsuarioService.cadastrarUsuario(this.usuario)
+      .subscribe(() => alert("cadastrado"))
+  }
 
 }
