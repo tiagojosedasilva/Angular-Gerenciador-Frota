@@ -34,5 +34,10 @@ export class UsuariosComponent implements OnInit {
     this.usuarios = this.usuariosService.obterTodos();
     return this.usuarios;
   }
+
+  excluirUsuario(id: string){
+    this.usuariosService.excluirUsuario(id)
+    return this.obterTodos()
+  }
 }
 

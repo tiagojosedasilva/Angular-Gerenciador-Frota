@@ -7,10 +7,13 @@
     <input type="text">
   </div>
   <div class="perfil">
-    <button class="button"  mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <button class="button"  mat-button [matMenuTriggerFor]="menu">
+      <!-- <mat-icon aria-hidden="true" fontIcon="account">account_circle</mat-icon> -->
+      <mat-icon aria-hidden="true">person</mat-icon>
+    </button>
     <mat-menu #menu="matMenu">
-      <button class="button" mat-menu-item>Item 1</button>
-      <button class="button" mat-menu-item>Item 2</button>
+      <button class="button" mat-menu-item>Configurações</button>
+      <button class="button" mat-menu-item [routerLink]="['']">Sair</button>
     </mat-menu>
   </div>
 </div>

@@ -16,9 +16,9 @@ export class UsuariosService {
     return this.httpClient.get<IUsuarios[]>(`${environment.url}usuario`)
   }
 
-//   excluirCarro(id: string){
-//     return this.httpClient.delete<IUsuarios>(`${environment}cars/${id}`).toPromise()
-//   }
+  excluirUsuario(id: string){
+    return this.httpClient.delete<IUsuarios>(`${environment.url}usuario/${id}`).toPromise()
+  }
 
 //   editarCarro(id: string, carro: IUsuarios){
 //     return this.httpClient.patch<IUsuarios>(`${environment}cars/${id}`, carro).toPromise()

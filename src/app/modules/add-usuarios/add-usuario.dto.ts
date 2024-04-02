@@ -1,6 +1,4 @@
-export interface IUsuarios{
-   
-    id: string;
+export interface AddUsuarios{
 
     nome: string;
     

@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { IUsuarios } from '../usuarios/IUsuarios';
+import { AddUsuariosService } from './add-usuarios.service';
+import { AddUsuarios } from './add-usuario.dto';
 
 @Component({
   selector: 'app-add-usuarios',
@@ -15,21 +17,41 @@ import { IUsuarios } from '../usuarios/IUsuarios';
 })
 export class AddUsuariosComponent {
 
-  usuario: IUsuarios = {
+  constructor(private addUsuarioService: AddUsuariosService){}
+
+  usuario: AddUsuarios = {
     nome: '',
-    idCliente: 0,
+    idCliente: 1,
     email: '',
     senha: '',
     tipoUsuario: 0,
     cpf: '',
     rg: '',
-    dataNascimento: null,
+    dataNascimento: "",
     celular: '',
-    endereço: '',
+    endereco: '',
     cep: '',
     cidade: '',
     estado: '',
-    statusConta: ''
+    statusConta: 'ATIVO',
+    cnh: '',
+    genero: '',
+    categoria: '',
+    historicoInfracoes: '',
+    historicoAcidentes: '',
+    banco: '',
+    numeroConta: '',
+    digitoVerificador: '',
+    tipo: '',
+    nomeEmergencia: '',
+    telefoneEmergencia: '',
+    validade: ''
   };
+
+submit(){
+  console.log(this.usuario)
+  return this.addUsuarioService.cadastrarUsuario(this.usuario)
+    .subscribe(() => alert("cadastrado"))
+}
 
 }

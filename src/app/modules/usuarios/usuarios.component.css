@@ -4,7 +4,7 @@
     /* justify-content: center; */
     /* border: 1px solid orangered; */
     height: 90%;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
     
 }
@@ -41,6 +41,11 @@ img{
     border-radius: 100%;
     background-color:white;
 }
+.card-usuarios{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
 .usuarios{
     display: flex;
 }
@@ -65,4 +70,24 @@ img{
 }
 .clear{
     clear: both;
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.button-delete{
+    background-color: transparent;
+    color: red;
+    border: none;
+}.button-delete:hover{
+    zoom: 1.3;
+}
+.button-edit{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.button-edit:hover{
+    zoom: 1.3;
 }

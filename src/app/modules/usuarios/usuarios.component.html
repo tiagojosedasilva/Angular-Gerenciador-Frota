@@ -1,15 +1,27 @@
 <div class="container">
    <u *ngFor="let usuario of usuarios | async">
-      <li>
-         <a href="" class="usuarios">
-         <div>
-               <mat-icon aria-hidden="true" fontIcon="menu"></mat-icon>
+      <li >
+         <div class="card-usuarios">
+            <a href="" class="usuarios">
+               <div >
+                  <div>
+                     <mat-icon aria-hidden="true">face</mat-icon>
+                  </div>
+                  <div>
+                     <p>{{usuario.nome}}</p>
+                     <p>{{usuario.rg}}</p>
+                  </div>
+               </div>
+            </a>
+            <div class="buttons">
+               <button class="button-edit">
+                  <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
+               </button>
+               <button class="button-delete">
+                  <mat-icon aria-hidden="true" fontIcon="delete" (click)="excluirUsuario(usuario.id)"></mat-icon>
+               </button>
+            </div>
          </div>
-         <div>
-               <p>{{usuario.nome}}</p>
-               <p>{{usuario.rg}}</p>
-         </div>
-         </a>
       </li>
       <!-- <li>
          <a href="" class="usuarios">

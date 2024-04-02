@@ -33,7 +33,7 @@
     color: white;
     flex-direction: column;
     width: 250px;
-    border-radius: 0 0 10px 0;
+    /* border-radius: 0 0 10px 0; */
     height: 100%;
     transition: 1s;
     transition-duration: 2s;
@@ -82,18 +82,26 @@
     background-color: #FEEBDD;
     border-radius: 100px;
   }
-  .conteudo{
-    padding: 20px;
-    /* border: 1px solid red; */
-    width: 100%;
+  .perfil .button{
+    color: white;
+    /* background-color: white; */
     justify-content: center;
+    border-radius: 1000px;
+    display: flex;
   }
   button{
     background-color: transparent;
     border: none;
     color: white;
-    padding-right: 10px;
+    /* padding-right: 10px; */
   }
   .button{
     color: #2A2B44;
+  }
+  .conteudo{
+    padding: 20px;
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-content: center;
+    
   }
