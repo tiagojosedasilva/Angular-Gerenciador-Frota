@@ -12,15 +12,16 @@ li{
     padding: 10px;
     /* display: flex; */
     justify-content: space-between;
+
     color: white;
-    display: inline-block;
+    display: flex;
     border-bottom: 1px solid whitesmoke;
     width: 100%;
 }
 a{
-    /* width: 95%; */
-    display: flex;
-    justify-content: space-between;
+    /* width: 50%; */
+    /* display: flex; */
+    /* justify-content: space-between; */
     text-decoration: none;
     color: white;
 }

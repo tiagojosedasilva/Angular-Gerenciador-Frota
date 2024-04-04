@@ -31,4 +31,14 @@ export class VeiculosComponent implements OnInit{
     this.veiculos = this.veiculoService.obterTodos()
     return this.veiculos
   }
+
+  excluirVeiculo(id: any){
+    id = id.toString()
+    this.veiculoService.excluirVeiculo(id).subscribe(
+      () => {
+        alert('Excluido do sucesso!')
+        this.ngOnInit()
+      }
+    )
+  }
 }

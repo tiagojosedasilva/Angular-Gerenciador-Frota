@@ -18,8 +18,7 @@ li{
     
     display: inline-block;
 
-    min-width: 210px;
-    max-width: 30%;
+    width: 230px;
     padding: 10px;
     margin: 10px;
 

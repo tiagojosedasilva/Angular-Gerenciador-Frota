@@ -16,9 +16,9 @@ export class VeiculoService {
     return this.httpClient.get<IVeiculo[]>(`${environment.url}veiculos`)
   }
 
-//   excluirUsuario(id: string){
-//     return this.httpClient.delete<IUsuarios>(`${environment.url}usuario/${id}`)
-//   }
+  excluirVeiculo(id: string){
+    return this.httpClient.delete<IVeiculo>(`${environment.url}veiculos/${id}`)
+  }
 
 //   editarCarro(id: string, carro: IUsuarios){
 //     return this.httpClient.patch<IUsuarios>(`${environment}cars/${id}`, carro).toPromise()
