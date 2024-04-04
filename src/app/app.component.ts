@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import { EditarUsuariosComponent } from './modules/editar-usuarios/editar-usuarios.component';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     UsuariosComponent,
     VeiculosComponent,
+    EditarUsuariosComponent
   ],
 
 })

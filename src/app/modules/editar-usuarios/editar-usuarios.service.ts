@@ -16,7 +16,7 @@ export class EditarUsuariosService {
         return this.httpClient.get<IUsuarios>(`${environment.url}usuario/${id}`)
     }
   
-    editarUsuario(usuario: IUsuarios){
-        return this.httpClient.patch<IUsuarios>(`${environment.url}usuario/${usuario.id}`, usuario)
+    editarUsuario(usuario: IUsuarios, id: string){
+        return this.httpClient.patch<IUsuarios>(`${environment.url}usuario/${id}`, usuario)
     }
 }

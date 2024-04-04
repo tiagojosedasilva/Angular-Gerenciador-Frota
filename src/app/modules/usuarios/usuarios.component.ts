@@ -37,7 +37,7 @@ export class UsuariosComponent implements OnInit {
 
   excluirUsuario(id: string){
     this.usuariosService.excluirUsuario(id)
-    return this.obterTodos()
+    .subscribe(() => this.ngOnInit())
   }
 
   icone(genero: string){

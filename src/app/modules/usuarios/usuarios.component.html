@@ -2,7 +2,7 @@
    <u *ngFor="let usuario of usuarios | async">
       <li >
          <div class="card-usuarios">
-            <a href="" class="usuarios">
+            <a class="usuarios">
                <div >
                   <div>
                      <mat-icon aria-hidden="true">{{icone(usuario.genero)}}</mat-icon>
@@ -15,7 +15,7 @@
             </a>
             <div class="buttons">
                <button class="button-edit">
-                  <a href="" [routerLink]="['editar-usuarios/', usuario.id]">
+                  <a href="" [routerLink]="['/editar-usuarios/', usuario.id]">
                      <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
                   </a>
                </button>

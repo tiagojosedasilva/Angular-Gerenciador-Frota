@@ -3,7 +3,7 @@
         <h3>Informações Pessoais</h3>
     </div>
    <!-- <form method="post" (ngSubmit)="submit()"> -->
-    <form method="post">
+    <form method="post" (ngSubmit)="submit()">
         <div class="dados-pessoais">
             <div class="item">
                 <p>Foto de Perfil:</p>
@@ -11,7 +11,7 @@
             </div>
             <div class="item">
                 <p>Nome Completo:</p>
-                <input type="text" [(ngModel)]="usuario.nome" name="usuario.nome">
+                <input type="text" [(ngModel)]="usuario.nome" name="usuario.nome" [ngModelOptions]="{standalone: true}">
             </div>
             <div class="item">
                 <p>Data de Nascimento:</p>

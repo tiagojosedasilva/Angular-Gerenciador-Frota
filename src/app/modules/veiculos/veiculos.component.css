@@ -1,8 +1,8 @@
 .container{
     background-color: #2A2B44;
     display: flex;
-    justify-content: center;
-    border: 1px solid orangered;
+    flex-direction: column;
+    /* justify-content: center; */
     height: 100%;
     border-radius: 20px;
     padding: 20px;
@@ -10,14 +10,24 @@
 }
 li{
     padding: 10px;
+    /* display: flex; */
+    justify-content: space-between;
     color: white;
     display: inline-block;
     border-bottom: 1px solid whitesmoke;
     width: 100%;
 }
 a{
-    width: 100%;
+    /* width: 95%; */
     display: flex;
+    justify-content: space-between;
     text-decoration: none;
     color: white;
+}
+.button-delete{
+    color: red;
+    display: flex;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
 }
