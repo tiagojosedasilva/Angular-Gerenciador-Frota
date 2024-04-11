@@ -3,6 +3,7 @@ import { UsuariosComponent } from './modules/usuarios/usuarios.component';
 import { VeiculosComponent } from './modules/veiculos/veiculos.component';
 import { AddUsuariosComponent } from './modules/add-usuarios/add-usuarios.component';
 import { EditarUsuariosComponent } from './modules/editar-usuarios/editar-usuarios.component';
+import { MostrarUsuarioComponent } from './modules/mostrar-usuario/mostrar-usuario.component';
 
 export const routes: Routes = [
     {
@@ -18,6 +19,10 @@ export const routes: Routes = [
     {
         path: "editar-usuarios/:id",
         component: EditarUsuariosComponent
+    },
+    {
+        path: "mostrar-usuario/:id",
+        component: MostrarUsuarioComponent
     },
     {
         path: "veiculos",

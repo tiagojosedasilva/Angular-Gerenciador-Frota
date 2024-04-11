@@ -2,7 +2,7 @@
    <u *ngFor="let usuario of usuarios | async">
       <li >
          <div class="card-usuarios">
-            <a class="usuarios">
+            <a class="usuarios" [routerLink]="['/mostrar-usuario', usuario.id]">
                <div >
                   <div>
                      <mat-icon aria-hidden="true">{{icone(usuario.genero)}}</mat-icon>
@@ -25,10 +25,10 @@
             </div>
          </div>
       </li>
-    </u>
+   </u>
+</div>
+<div class="add">
+   <div class='add-button' [routerLink]="['/add-usuarios']">
+      <mat-icon aria-hidden="true" fontIcon="add"></mat-icon>
    </div>
-   <div class="add">
-      <div class='add-button' [routerLink]="['/add-usuarios']">
-         <mat-icon aria-hidden="true" fontIcon="add"></mat-icon>
-      </div>
-   </div>
+</div>
