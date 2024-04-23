@@ -27,7 +27,7 @@ export class EditarUsuariosComponent implements OnInit{
       this.id = param.get('id');
     })
     this.usuario = await this.editarUsuarioService.buscarUsuario(this.id).toPromise()
-    console.log(this.usuario)
+    // console.log(this.usuario)
   }
 
   submit(){

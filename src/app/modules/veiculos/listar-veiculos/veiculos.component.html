@@ -4,9 +4,16 @@
             <a [routerLink]="['/mostrar-usuarios/', veiculo.id]"> 
                <div>{{veiculo.placa}} - {{veiculo.modelo}} - {{veiculo.anoModelo}} - {{veiculo.cor}}</div>
             </a>
-            <button class="button-delete" (click)="excluirVeiculo(veiculo.id)">
-               <mat-icon aria-hidden="true" fontIcon="delete"></mat-icon>
-            </button>
+            <div class="caixa">
+               <button class="button-edit">
+                  <a href="" [routerLink]="['/editar-veiculo/', veiculo.id]">
+                     <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
+                  </a>
+               </button>
+               <button class="button-delete" (click)="excluirVeiculo(veiculo.id)">
+                  <mat-icon aria-hidden="true" fontIcon="delete"></mat-icon>
+               </button>
+            </div>
          </li>
    </u>
 </div>

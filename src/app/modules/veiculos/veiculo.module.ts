@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { VeiculoService } from './listar-veiculos/veiculos.service';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { EditarVeiculosComponent } from './editar-veiculos/editar-veiculos.component';
 
 @NgModule({
   declarations: [],
   imports: [
     AddVeiculosComponent,
     CommonModule,
+    EditarVeiculosComponent,
     HttpClientModule,
     UsuariosModule,
     VeiculosComponent,

@@ -5,6 +5,7 @@ import { AddUsuariosComponent } from './modules/usuarios/add-usuarios/add-usuari
 import { EditarUsuariosComponent } from './modules/usuarios/editar-usuarios/editar-usuarios.component';
 import { MostrarUsuarioComponent } from './modules/usuarios/mostrar-usuario/mostrar-usuario.component';
 import { AddVeiculosComponent } from './modules/veiculos/add-veiculos/add-veiculos.component';
+import { EditarVeiculosComponent } from './modules/veiculos/editar-veiculos/editar-veiculos.component';
 
 export const routes: Routes = [
     {
@@ -32,5 +33,9 @@ export const routes: Routes = [
     {
         path:'add-veiculos',
         component: AddVeiculosComponent
+    },
+    {
+        path: 'editar-veiculo/:id',
+        component: EditarVeiculosComponent
     },
 ];

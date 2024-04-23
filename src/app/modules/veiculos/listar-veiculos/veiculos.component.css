@@ -50,3 +50,12 @@ a{
     padding: 9px 9px 2px 9px;
     transition: 0.2s;
 }
+.button-edit{
+    background-color: transparent;
+    color: white;
+    border: none
+}
+.caixa{
+    display: flex;
+    flex-direction: row;
+}

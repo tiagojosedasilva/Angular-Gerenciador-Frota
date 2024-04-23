@@ -16,6 +16,10 @@ export class VeiculoService {
     return this.httpClient.get<IVeiculo[]>(`${environment.url}veiculos`)
   }
 
+  obterUm(id: number){
+    return this.httpClient.get<IVeiculo[]>(`${environment.url}veiculos/${id}`)
+  }
+
   excluirVeiculo(id: string){
     return this.httpClient.delete<IVeiculo>(`${environment.url}veiculos/${id}`)
   }
@@ -24,7 +28,7 @@ export class VeiculoService {
     return this.httpClient.post<IVeiculo>(`${environment.url}veiculos`, veiculo)
   }
 
-//   editarCarro(id: string, carro: IUsuarios){
-//     return this.httpClient.patch<IUsuarios>(`${environment}cars/${id}`, carro).toPromise()
-//   }
+  editarVeiculo(id: string, veiculo: IVeiculo){
+    return this.httpClient.patch<IVeiculo>(`${environment.url}veiculos/${id}`, veiculo)
+  }
 }
