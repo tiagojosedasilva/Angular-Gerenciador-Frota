@@ -3,15 +3,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet, RouterModule } from '@angular/router';
-import { VeiculoService } from './veiculos.service';
+
 import { Observable } from 'rxjs';
-import { IVeiculo } from './interface/iveiculo';
+import { IVeiculo } from '../interface/iveiculo';
 import { MatIconModule } from '@angular/material/icon';
+import { VeiculoService } from '../veiculos.service';
 
 @Component({
   selector: 'app-veiculos',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HttpClientModule, FormsModule, RouterModule, MatIconModule,],
+  imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, MatIconModule, HttpClientModule,],
   providers: [VeiculoService],
   templateUrl: './veiculos.component.html',
   styleUrl: './veiculos.component.css'
@@ -24,7 +25,7 @@ export class VeiculosComponent implements OnInit{
 
   ngOnInit(): void {
     this.obterTodos()
-    console.log(this.veiculos)
+    // console.log(this.veiculos)
   }
 
   obterTodos(){

@@ -1,4 +1,4 @@
-import { UsuariosComponent } from "./modules/usuarios/usuarios.component";
+import { UsuariosComponent } from "./modules/usuarios/listar-usuarios/usuarios.component";
 
 export const navbarData = [
     {

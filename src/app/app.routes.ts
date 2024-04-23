@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
-import { UsuariosComponent } from './modules/usuarios/usuarios.component';
-import { VeiculosComponent } from './modules/veiculos/veiculos.component';
-import { AddUsuariosComponent } from './modules/add-usuarios/add-usuarios.component';
-import { EditarUsuariosComponent } from './modules/editar-usuarios/editar-usuarios.component';
-import { MostrarUsuarioComponent } from './modules/mostrar-usuario/mostrar-usuario.component';
+import { UsuariosComponent } from './modules/usuarios/listar-usuarios/usuarios.component';
+import { VeiculosComponent } from './modules/veiculos/listar-veiculos/veiculos.component';
+import { AddUsuariosComponent } from './modules/usuarios/add-usuarios/add-usuarios.component';
+import { EditarUsuariosComponent } from './modules/usuarios/editar-usuarios/editar-usuarios.component';
+import { MostrarUsuarioComponent } from './modules/usuarios/mostrar-usuario/mostrar-usuario.component';
+import { AddVeiculosComponent } from './modules/veiculos/add-veiculos/add-veiculos.component';
 
 export const routes: Routes = [
     {
@@ -27,5 +28,9 @@ export const routes: Routes = [
     {
         path: "veiculos",
         component: VeiculosComponent
+    },
+    {
+        path:'add-veiculos',
+        component: AddVeiculosComponent
     },
 ];
