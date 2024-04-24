@@ -21,6 +21,12 @@
   <div [hidden]="!visible" class="sidenav">
     <ul >
       <li>
+        <a [routerLink]="['/usuarios']">
+            <i class="fa-solid fa-chart-simple sidebar-icon"></i>
+            <p>usuarios</p>
+        </a>
+      </li>
+      <li>
         <a [routerLink]="['/veiculos']">
             <i class="fa-solid fa-chart-simple sidebar-icon"></i>
             <p>veiculos</p>
@@ -29,10 +35,34 @@
       <li>
         <a [routerLink]="['/usuarios']">
             <i class="fa-solid fa-chart-simple sidebar-icon"></i>
-            <p>usuarios</p>
+            <p>Rotas</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/usuarios']">
+            <i class="fa-solid fa-chart-simple sidebar-icon"></i>
+            <p>Consumo</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/usuarios']">
+            <i class="fa-solid fa-chart-simple sidebar-icon"></i>
+            <p>Chamados</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/usuarios']">
+            <i class="fa-solid fa-chart-simple sidebar-icon"></i>
+            <p>Revisões</p>
         </a>
       </li>
     </ul>
+    <!-- <ul class="casa">
+      <li class="img">
+        <img src="../assets/museu-britanico.png" alt="">
+        <p>HOME Cod3</p>
+      </li>
+    </ul> -->
   </div>
   <div class="conteudo">
     <router-outlet></router-outlet>  

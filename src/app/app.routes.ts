@@ -6,8 +6,13 @@ import { EditarUsuariosComponent } from './modules/usuarios/editar-usuarios/edit
 import { MostrarUsuarioComponent } from './modules/usuarios/mostrar-usuario/mostrar-usuario.component';
 import { AddVeiculosComponent } from './modules/veiculos/add-veiculos/add-veiculos.component';
 import { EditarVeiculosComponent } from './modules/veiculos/editar-veiculos/editar-veiculos.component';
+import { LoginComponent } from './modules/login/login/login.component';
 
 export const routes: Routes = [
+    {
+        path: 'login',
+        component: LoginComponent
+    },
     {
         path: 'usuarios',
         // redirectTo: "usuarios",
