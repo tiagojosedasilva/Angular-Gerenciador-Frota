@@ -7,11 +7,16 @@ import { MostrarUsuarioComponent } from './modules/usuarios/mostrar-usuario/most
 import { AddVeiculosComponent } from './modules/veiculos/add-veiculos/add-veiculos.component';
 import { EditarVeiculosComponent } from './modules/veiculos/editar-veiculos/editar-veiculos.component';
 import { LoginComponent } from './modules/login/login/login.component';
+import { CadastreSeComponent } from './modules/login/cadastre-se/cadastre-se.component';
 
 export const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'cadastre-se',
+        component: CadastreSeComponent
     },
     {
         path: 'usuarios',
