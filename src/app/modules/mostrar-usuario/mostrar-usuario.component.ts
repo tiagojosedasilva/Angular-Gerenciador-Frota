@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
 import { EditarUsuariosService } from '../editar-usuarios/editar-usuarios.service';
 import { EditarUsuariosComponent } from '../editar-usuarios/editar-usuarios.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-mostrar-usuario',
   standalone: true,
-  imports: [EditarUsuariosComponent ],
+  imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, MatIconModule, HttpClientModule,],
   templateUrl: './mostrar-usuario.component.html',
   styleUrl: './mostrar-usuario.component.css'
 })
@@ -34,7 +38,5 @@ export class MostrarUsuarioComponent implements OnInit{
     return this.editarUsuarioService.editarUsuario(this.usuario, this.usuario.id)
       .subscribe(() => alert("editado com sucesso!"))
   }
-
-
 
 }

@@ -1,21 +1,21 @@
 <div class="container">
-    <h3>Nome</h3>
+    <h3>{{usuario.nome}}</h3>
     <div class="conteudo">
         <div class="texto">
             <div>
-                <div>Marca</div>
-                <div>Placa</div>
-                <div>Consumo</div>
+                <div>Marca: {{usuario.idVeiculo2.marca}}</div>
+                <div>Placa: {{usuario.idVeiculo2.placa}}</div>
+                <div>Consumo: {{usuario.idVeiculo2.consumoMedioLitro}}</div>
             </div>
             <div>
-                <div>Modelo</div>
-                <div>Ano</div>
-                <div>Multas</div>
+                <div>Modelo: {{usuario.idVeiculo2.modelo}}</div>
+                <div>Ano: {{usuario.idVeiculo2.anoModelo}}</div>
+                <div>Multas: 0</div>
             </div>
             <div>
-                <div>Revisão</div>
-                <div>KM atual</div>
-                <div>Acindentes</div>
+                <div>Revisão: 0</div>
+                <div>KM atual: {{usuario.idVeiculo2.quilometragem}}</div>
+                <div>Acindentes: 0</div>
             </div>
         </div>
         <div class="foto">
@@ -23,11 +23,11 @@
         </div>
         <div class="texto">
             <div>Destino</div>
-            <div>Consumo Estimado</div>
+            <div>Consumo Estimado: {{usuario.idVeiculo2.consumoMedioLitro}}</div>
         </div>
     </div>
 </div>
 <div class="botoes">
     <!-- <button [routerLink]="['/editar-usuarios/', usuario.id]">Editar</button> -->
-    <button>Editar</button>
+    <button [routerLink]="['/editar-usuarios/', id]">Editar</button>
 </div>
