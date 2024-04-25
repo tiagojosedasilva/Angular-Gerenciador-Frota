@@ -3,10 +3,9 @@
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    height: 100%;
+    height: 90%;
     border-radius: 20px;
     padding: 20px;
-    
 }
 li{
     padding: 10px;
@@ -31,4 +30,32 @@ a{
     justify-content: end;
     background-color: transparent;
     border: none;
+}
+.add{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+.add-button{
+    color: white;
+    padding: 6px 6px 0 6px;
+    background-color: #2A2B44;
+    display: inline-block;
+    border-radius: 100px;
+    justify-content: end;
+    position: fixed;
+}
+.add-button:hover{
+    padding: 9px 9px 2px 9px;
+    transition: 0.2s;
+}
+.button-edit{
+    background-color: transparent;
+    color: white;
+    border: none
+}
+.caixa{
+    display: flex;
+    flex-direction: row;
 }

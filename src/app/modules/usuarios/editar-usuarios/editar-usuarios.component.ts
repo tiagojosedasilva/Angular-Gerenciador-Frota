@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule, ActivatedRoute } from '@angular/router';
-import { IUsuarios } from '../usuarios/IUsuarios';
+import { IUsuarios } from '../listar-usuarios/IUsuarios';
 import { EditarUsuariosService } from './editar-usuarios.service';
 import { Observable, Observer, Operator, Subscription } from 'rxjs';
 
@@ -27,7 +27,7 @@ export class EditarUsuariosComponent implements OnInit{
       this.id = param.get('id');
     })
     this.usuario = await this.editarUsuarioService.buscarUsuario(this.id).toPromise()
-    console.log(this.usuario)
+    // console.log(this.usuario)
   }
 
   submit(){

@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="caixa">
+        <p>
+            Modelo: <input [(ngModel)]="veiculo.modelo" type="text">
+        </p>
+        <p> 
+            Marca: <input [(ngModel)]="veiculo.marca" type="text">
+        </p>
+        <p>
+            Placa: <input [(ngModel)]="veiculo.placa" type="text">
+        </p>
+        <p>
+            Km Atual: <input [(ngModel)]="veiculo.quilometragem" type="text">
+        </p>
+        <p>
+            Ano de Fabricação: <input [(ngModel)]="veiculo.anoFabricacao" type="text">
+        </p>
+        <p>
+            Ano do Modelo: <input [(ngModel)]="veiculo.anoModelo" type="text">
+        </p>
+        <p>
+            Cor: <input [(ngModel)]="veiculo.cor" type="text">
+        </p>
+        <p>
+            Tipo Combustível: <input [(ngModel)]="veiculo.tipoCombustivel" type="text">
+        </p>
+        <p>
+            Consumo Médio: <input [(ngModel)]="veiculo.consumoMedioLitro" type="text">
+        </p>
+        <p>
+            Volume do Tanque: <input [(ngModel)]="veiculo.volumeTanque" type="text">
+        </p>
+        <!-- <p>
+            Adicionar: <input [(ngModel)]="veiculo." type="text">
+        </p> -->
+    </div>
+    <p class="observacoes">Observações:</p>
+    <div class="textarea">
+        <textarea name="" id="" rows="5"></textarea>
+    </div>
+    <div class="submiter">
+        <button type="submit" (click)="submit()" >
+            <p>Salvar</p>
+        </button>
+    </div>
+</div>
