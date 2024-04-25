@@ -1,0 +1,33 @@
+<div class="container">
+    <!-- <h3>{{veiculo}}</h3> -->
+    <div class="conteudo">
+        <div class="texto">
+            <div>
+                <div>Marca: {{veiculo.marca}}</div>
+                <div>Placa: {{veiculo.placa}}</div>
+                <div>Consumo: {{veiculo.consumoMedioLitro}}</div>
+            </div>
+            <div>
+                <div>Modelo: {{veiculo.modelo}}</div>
+                <div>Ano: {{veiculo.anoModelo}}</div>
+                <div>Multas: 0</div>
+            </div>
+            <div>
+                <div>Revisão: 0</div>
+                <div>KM atual: {{veiculo.quilometragem}}</div>
+                <div>Acindentes: 0</div>
+            </div>
+        </div>
+        <div class="foto">
+            <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2022/07/Honda-HR-V-Touring-1.5-turbo-2023-4.jpg?quality=70&strip=info&w=720&h=440&crop=1" alt="">
+        </div>
+        <div class="texto">
+            <div>Destino</div>
+            <div>Consumo Estimado: {{veiculo.consumoMedioLitro}}</div>
+        </div>
+    </div>
+</div>
+<div class="botoes">
+    <!-- <button [routerLink]="['/editar-usuarios/', id]">Editar</button> -->
+    <button [routerLink]="['/editar-veiculo/', id]">Editar</button>
+</div>

@@ -8,6 +8,7 @@ import { AddVeiculosComponent } from './modules/veiculos/add-veiculos/add-veicul
 import { EditarVeiculosComponent } from './modules/veiculos/editar-veiculos/editar-veiculos.component';
 import { LoginComponent } from './modules/login/login/login.component';
 import { CadastreSeComponent } from './modules/login/cadastre-se/cadastre-se.component';
+import { MostrarVeiculoComponent } from './modules/veiculos/mostrar-veiculo/mostrar-veiculo.component';
 
 export const routes: Routes = [
     {
@@ -47,5 +48,9 @@ export const routes: Routes = [
     {
         path: 'editar-veiculo/:id',
         component: EditarVeiculosComponent
+    },
+    {
+        path: 'mostrar-veiculo/:id',
+        component: MostrarVeiculoComponent
     },
 ];

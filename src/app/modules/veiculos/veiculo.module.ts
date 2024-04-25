@@ -8,6 +8,7 @@ import { VeiculoService } from './listar-veiculos/veiculos.service';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { EditarVeiculosComponent } from './editar-veiculos/editar-veiculos.component';
+import { MostrarVeiculoComponent } from './mostrar-veiculo/mostrar-veiculo.component';
 
 @NgModule({
   declarations: [],
@@ -16,6 +17,7 @@ import { EditarVeiculosComponent } from './editar-veiculos/editar-veiculos.compo
     CommonModule,
     EditarVeiculosComponent,
     HttpClientModule,
+    MostrarVeiculoComponent,
     UsuariosModule,
     VeiculosComponent,
     RouterModule, 

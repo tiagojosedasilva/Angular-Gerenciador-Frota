@@ -1,7 +1,7 @@
 <div class="container">
    <u  *ngFor="let veiculo of veiculos | async">
          <li>
-            <a [routerLink]="['/mostrar-usuarios/', veiculo.id]"> 
+            <a [routerLink]="['/mostrar-veiculo/', veiculo.id]"> 
                <div>{{veiculo.placa}} - {{veiculo.modelo}} - {{veiculo.anoModelo}} - {{veiculo.cor}}</div>
             </a>
             <div class="caixa">

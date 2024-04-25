@@ -13,7 +13,7 @@
     </button>
     <mat-menu #menu="matMenu">
       <button class="button" mat-menu-item>Configurações</button>
-      <button class="button" mat-menu-item [routerLink]="['']">Sair</button>
+      <button class="button" mat-menu-item [routerLink]="['login']">Sair</button>
     </mat-menu>
   </div>
 </div>
@@ -54,6 +54,12 @@
         <a [routerLink]="['/usuarios']">
             <i class="fa-solid fa-chart-simple sidebar-icon"></i>
             <p>Revisões</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/usuarios']">
+            <i class="fa-solid fa-chart-simple sidebar-icon"></i>
+            <p>Vínculos</p>
         </a>
       </li>
     </ul>

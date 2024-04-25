@@ -17,7 +17,7 @@ export class VeiculoService {
   }
 
   obterUm(id: number){
-    return this.httpClient.get<IVeiculo[]>(`${environment.url}veiculos/${id}`)
+    return this.httpClient.get<IVeiculo>(`${environment.url}veiculos/${id}`)
   }
 
   excluirVeiculo(id: string){

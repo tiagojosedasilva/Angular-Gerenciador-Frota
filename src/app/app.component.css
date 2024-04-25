@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 250px;
-    height: 99%;
+    height: 100%;
     transition: 1s;
     transition-duration: 2s;
   }
