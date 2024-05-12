@@ -1,0 +1,104 @@
+.container{
+    /* display: flex; */
+    background-color: #2A2B44;
+    justify-content: center;
+    height: 85%;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    overflow: auto;
+}
+
+.titulo{
+    padding: 20px;
+    padding: 15px;
+    width: 90%;
+    padding-left: 7%;
+    display: flex;
+    color: white;
+    border-bottom: 1px solid white;
+}
+input{
+    border-radius: 10px;
+    /* padding: 0 50px; */
+    text-align: center;
+    background-color: #bcbcdd;
+    border: none;
+    margin: 5px;
+    border: none;
+    width: 180px;
+}
+input:hover, :focus{
+    border: none;
+    /* width: px; */
+    margin:  5px 5px 5px 5px;
+    transition: 0.3s;
+    background-color: white;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p{
+    margin: 5px;
+}
+.dados-pessoais{
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-self: center;
+}
+/* textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    display: flex;
+    width: 80% !important;
+} */
+.item{
+    margin: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+}
+button{
+    color: #2A2B44;
+    background-color: aliceblue;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+}button:hover{
+    background-color: rgb(161, 166, 170);
+}
+.submiter{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    border: none;
+}
+.submiter button p{
+    margin-bottom: 5px;
+}
+textarea{
+    border: none;
+    width: 90% !important;
+    border-radius: 10px;
+}
+textarea:hover, :focus{
+    border: none;
+    width: 90% !important;
+    transition: 0;
+}
+.textarea{
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+}

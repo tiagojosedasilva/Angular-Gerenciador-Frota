@@ -1,1 +1,63 @@
-<p>add-rota works!</p>
+<div class="container" >
+    <div class="titulo">
+        <h3>Informações Pessoais</h3>
+    </div>
+   <form method="post" (ngSubmit)="submit()">
+        <div class="dados-pessoais">
+            <div class="item">
+                <p>Destino:</p>
+                <input type="text" [(ngModel)]="rota.destino" name="rota.destino">
+            </div>
+            <div class="item">
+                <p>N:</p>
+                <input type="text" [(ngModel)]="rota.numero" name="rota.numero">
+            </div>
+            <div class="item">
+                <p>Bairro:</p>
+                <input type="text" [(ngModel)]="rota.bairro" name="rota.bairro">
+            </div>
+            <div class="item">
+                <p>Cidade:</p>
+                <input type="text" [(ngModel)]="rota.cidade" name="rota.cidade">
+            </div>
+            <div class="item">
+                <p>Complemento:</p>
+                <input type="text" [(ngModel)]="rota.complemento" name="rota.complemento">
+            </div>
+            <div class="item">
+                <p>Distancia:</p>
+                <input type="text" [(ngModel)]="rota.distancia" name="rota.distancia">
+            </div>
+            <div class="item">
+                <p>Cosnsumo:</p>
+                <input type="text" [(ngModel)]="rota.consumo" name="rota.consumo">
+            </div>
+            <div class="item">
+                <p>Carro:</p>
+                <input type="text" [(ngModel)]="rota.carro" name="rota.carro">
+            </div>
+            <div class="item">
+                <p>Referencia:</p>
+                <input type="text" [(ngModel)]="rota.referencia" name="rota.referencia">
+            </div>
+            <div class="item">
+                <p>Condutor:</p>
+                <input type="text" [(ngModel)]="rota.condutor" name="rota.condutor">
+            </div>
+        </div>
+        <div class="textarea">
+            <p>Observações:</p>
+            <!-- <input type="text" [(ngModel)]="rota.cep" name="rota.cep"> -->
+            <textarea name="" id="" cols="100%" rows="10"></textarea>
+        </div>
+   
+
+        <div class="submiter">
+            <button type="submit">
+                <mat-icon>save_as</mat-icon>
+                <p>Salvar</p>
+            </button>
+        </div>
+   </form>
+</div>
+ 

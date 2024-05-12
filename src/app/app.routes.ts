@@ -14,6 +14,13 @@ import { AddRotaComponent } from './modules/rotas/add-rota/add-rota.component';
 import { ListarRotasComponent } from './modules/rotas/listar-rotas/listar-rotas.component';
 import { EditarRotaComponent } from './modules/rotas/editar-rota/editar-rota.component';
 import { ExibirRotaComponent } from './modules/rotas/exibir-rota/exibir-rota.component';
+import { RedefinirSenhaComponent } from './modules/login/redefinir-senha/redefinir-senha.component';
+import { ListarComponent } from './modules/consumo/listar/listar.component';
+import { AddConsumoComponent } from './modules/consumo/add-consumo/add-consumo.component';
+import { EditarConsumoComponent } from './modules/consumo/editar-consumo/editar-consumo.component';
+import { AddChamadosComponent } from './modules/chamados/add-chamados/add-chamados.component';
+import { EditarChamadosComponent } from './modules/chamados/editar-chamados/editar-chamados.component';
+import { ListarChamadosComponent } from './modules/chamados/listar-chamados/listar-chamados.component';
 
 export const routes: Routes = [
     {
@@ -23,6 +30,10 @@ export const routes: Routes = [
     {
         path: 'cadastre-se',
         component: CadastreSeComponent
+    },
+    {
+        path: 'redefinir-senha',
+        component: RedefinirSenhaComponent
     },
     {
         path: 'usuarios',
@@ -77,5 +88,33 @@ export const routes: Routes = [
     {
         path: 'exibir-rota',
         component: ExibirRotaComponent
+    },
+    {
+        path: 'listar-consumos',
+        component: ListarComponent
+    },
+    {
+        path: 'add-consumo',
+        component: AddConsumoComponent
+    },
+    {
+        path: 'add-consumo',
+        component: EditarConsumoComponent
+    },
+    {
+        path: 'add-consumo',
+        component: EditarConsumoComponent
+    },
+    {
+        path: 'add-chamado',
+        component: AddChamadosComponent
+    },
+    {
+        path: 'editar-chamado',
+        component: EditarChamadosComponent
+    },
+    {
+        path: 'listar-chamados',
+        component: ListarChamadosComponent
     },
 ];

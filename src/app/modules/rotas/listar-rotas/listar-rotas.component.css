@@ -1,0 +1,93 @@
+.container{
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* border: 1px solid orangered; */
+    height: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+ul{
+    display: inline; 
+}
+li{
+    background-color: #2A2B44;
+    color: white;
+    border-radius: 10px;
+    
+    display: inline-block;
+
+    width: 230px;
+    padding: 10px;
+    margin: 10px;
+
+    position: relative;
+}
+li:hover{
+    padding: 18px;
+    padding-left: 12px;
+    margin: 2px;
+    margin-right: 18px;
+    box-shadow:  10px 7px #ecc6aa;
+    transition: 0.3s;
+}
+a{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+img{
+    border-radius: 100%;
+    background-color:white;
+}
+.card-usuarios{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
+.usuarios{
+    display: flex;
+}
+.add{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+.add-button{
+    color: white;
+    padding: 6px 6px 0 6px;
+    background-color: #2A2B44;
+    display: inline-block;
+    border-radius: 100px;
+    justify-content: end;
+    position: fixed;
+}
+.add-button:hover{
+    padding: 9px 9px 2px 9px;
+    transition: 0.2s;
+}
+.clear{
+    clear: both;
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.button-delete{
+    background-color: transparent;
+    color: red;
+    border: none;
+}.button-delete:hover{
+    zoom: 1.3;
+}
+.button-edit{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.button-edit:hover{
+    zoom: 1.3;
+}

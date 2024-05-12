@@ -1,1 +1,32 @@
-<p>listar-rotas works!</p>
+<div class="container">
+    <u *ngFor="let rota of rotas">
+       <li >
+          <div class="card-rotas">
+             <a class="rotas" [routerLink]="['/mostrar-rota', rota.id]">
+                <div >
+                   <div>
+                      <p>{{rota.destino}}</p>
+                      <p>{{rota.placa}}</p>
+                   </div>
+                </div>
+             </a>
+             <div class="buttons">
+                <button class="button-edit">
+                   <a href="" [routerLink]="['/editar-rotas/', rota.id]">
+                      <mat-icon aria-hidden="true" fontIcon="edit"></mat-icon>
+                   </a>
+                </button>
+                <button class="button-delete">
+                   <mat-icon aria-hidden="true" fontIcon="delete" (click)="excluirRota(rota.id)"></mat-icon>
+                </button>
+             </div>
+          </div>
+       </li>
+    </u>
+ </div>
+ <div class="add">
+    <div class='add-button' [routerLink]="['/add-rotas']">
+       <mat-icon aria-hidden="true" fontIcon="add"></mat-icon>
+    </div>
+ </div>
+ 
