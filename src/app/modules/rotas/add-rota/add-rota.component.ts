@@ -32,7 +32,7 @@ export class AddRotaComponent{
     placa: "",
     referencia: "",
     idCondutor: 0,
-    condutor: ''
+    // condutor: 0
   }
 
 

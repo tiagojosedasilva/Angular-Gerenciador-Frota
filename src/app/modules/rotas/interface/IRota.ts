@@ -12,5 +12,5 @@ export interface IRota {
     placa: string
     referencia: string
     idCondutor: number
-    condutor: any
+    // condutor: any
 }
