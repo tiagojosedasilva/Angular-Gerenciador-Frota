@@ -22,6 +22,7 @@ export class AddUsuariosComponent {
   usuario: AddUsuarios = {
     nome: '',
     idCliente: 1,
+    idVeiculo: 0,
     email: '',
     senha: '',
     tipoUsuario: 0,
@@ -56,7 +57,7 @@ export class AddUsuariosComponent {
 
     // console.log(this.usuario)
     return this.addUsuarioService.cadastrarUsuario(this.usuario)
-      .subscribe(() => alert("cadastrado"))
+      .subscribe(() => alert("Cadastrado com sucesso"))
   }
 
 }

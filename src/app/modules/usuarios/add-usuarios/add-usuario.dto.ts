@@ -2,7 +2,9 @@ export interface AddUsuarios{
 
     nome: string;
     
-    idCliente: number
+    idCliente: number;
+    
+    idVeiculo: number;
 
     email: string;
     

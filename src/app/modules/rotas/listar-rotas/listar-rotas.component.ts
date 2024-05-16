@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { IRota } from '../interface/IRota';
+import { RotasService } from '../rotas-service/rotas.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-listar-rotas',
@@ -13,9 +15,25 @@ import { IRota } from '../interface/IRota';
   templateUrl: './listar-rotas.component.html',
   styleUrl: './listar-rotas.component.css'
 })
-export class ListarRotasComponent {
+export class ListarRotasComponent implements OnInit{
+  
+  rotas = new Observable<IRota[]>;
+  
+  constructor(
+    private readonly rotasService: RotasService
+  ){}
 
-  rotas: IRota[] = [];
+  ngOnInit(): void {
+    this.obterTodos()
+  }
 
-  excluirRota(id: number){}
+  async obterTodos(){
+    this.rotas = await this.rotasService.obterTodos()
+    return this.rotas
+  }
+
+  excluirRota(id: number){
+    this.rotasService.excluirRota(id).subscribe(() => alert("Rota Excluida com sucesso!"))
+    this.ngOnInit()
+  }
 }

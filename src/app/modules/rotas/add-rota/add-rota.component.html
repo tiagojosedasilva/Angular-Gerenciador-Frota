@@ -2,7 +2,7 @@
     <div class="titulo">
         <h3>Adicionar Rota</h3>
     </div>
-   <form method="post" (ngSubmit)="submit()">
+   <form method="post" (ngSubmit)="submit(rota)">
         <div class="dados-pessoais">
             <div class="item">
                 <p>Destino:</p>
@@ -34,7 +34,7 @@
             </div>
             <div class="item">
                 <p>Carro:</p>
-                <input type="text" [(ngModel)]="rota.carro" name="rota.carro">
+                <input type="text" [(ngModel)]="rota.idVeiculo" name="rota.idVeiculo">
             </div>
             <div class="item">
                 <p>Referencia:</p>

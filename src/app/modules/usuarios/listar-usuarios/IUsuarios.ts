@@ -6,6 +6,8 @@ export interface IUsuarios{
     
     idCliente: number
 
+    idVeiculo: number
+
     email: string;
     
     senha: string;

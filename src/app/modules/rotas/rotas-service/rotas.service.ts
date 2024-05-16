@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
+import { IRota } from '../interface/IRota';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +12,18 @@ export class RotasService {
   }
 
   obterTodos(){
-    // return this.httpClient.get<IUsuarios[]>(`${environment.url}usuario`)
+    return this.httpClient.get<IRota[]>(`${environment.url}rotas`)
   }
 
-  excluirUsuario(id: string){
-    // return this.httpClient.delete<IUsuarios>(`${environment.url}usuario/${id}`)
+  cadastraRota(rota: IRota){
+    return this.httpClient.post<IRota[]>(`${environment.url}rotas`, rota)
   }
 
-//   editarCarro(id: string, carro: IUsuarios){
-//     return this.httpClient.patch<IUsuarios>(`${environment}cars/${id}`, carro).toPromise()
-//   }
+  excluirRota(id: number){
+    return this.httpClient.delete<IRota>(`${environment.url}rotas/${id}`)
+  }
+
+  // editarCarro(id: string, carro: IRota){
+  //   return this.httpClient.patch<IRota>(`${environment}cars/${id}`, carro).toPromise()
+  // }
 }

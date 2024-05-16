@@ -1,12 +1,12 @@
 <div class="container">
-    <u *ngFor="let rota of rotas">
+    <u *ngFor="let rota of rotas | async">
        <li >
           <div class="card-rotas">
              <a class="rotas" [routerLink]="['/mostrar-rota', rota.id]">
                 <div >
                    <div>
                       <p>{{rota.destino}}</p>
-                      <p>{{rota.placa}}</p>
+                      <p>{{rota.referencia}}</p>
                    </div>
                 </div>
              </a>
@@ -25,7 +25,7 @@
     </u>
  </div>
  <div class="add">
-    <div class='add-button' [routerLink]="['/add-rotas']">
+    <div class='add-button' [routerLink]="['/add-rotas   ']">
        <mat-icon aria-hidden="true" fontIcon="add"></mat-icon>
     </div>
  </div>

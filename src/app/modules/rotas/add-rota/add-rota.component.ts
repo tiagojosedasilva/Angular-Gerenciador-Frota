@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule } from '@angular/router';
+import { RotasService } from '../rotas-service/rotas.service';
+import { IRota } from '../interface/IRota';
 
 @Component({
   selector: 'app-add-rota',
@@ -12,9 +14,30 @@ import { RouterOutlet, RouterModule } from '@angular/router';
   templateUrl: './add-rota.component.html',
   styleUrl: './add-rota.component.css'
 })
-export class AddRotaComponent {
+export class AddRotaComponent{
+  
+  constructor(private readonly rotasService: RotasService){}
 
-  rota: any = {}
 
-  submit(){}
+  rota: IRota = {
+    id: 0,
+    destino: "",
+    idVeiculo: 0,
+    cidade: "",
+    bairro: "",
+    numero: 0,
+    complemento: "",
+    distancia: "",
+    consumo: "",
+    placa: "",
+    referencia: "",
+    idCondutor: 0,
+    condutor: ''
+  }
+
+
+
+  submit(rota: IRota){
+    return this.rotasService.cadastraRota(rota).subscribe(() => alert("Rota cadastrada com sucesso!"))
+  }
 }
