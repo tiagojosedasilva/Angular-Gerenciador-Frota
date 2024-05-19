@@ -3,12 +3,10 @@
        <li >
           <div class="card-rotas">
              <a class="rotas" [routerLink]="['/mostrar-rota', rota.id]">
-                <div >
-                   <div>
-                      <p>{{rota.destino}}</p>
-                      <p>{{rota.referencia}}</p>
-                   </div>
-                </div>
+               <div>
+                  <p>{{rota.destino}}</p>
+                  <p>{{rota.referencia}}</p>
+               </div>
              </a>
              <div class="buttons">
                 <button class="button-edit">
@@ -25,7 +23,7 @@
     </u>
  </div>
  <div class="add">
-    <div class='add-button' [routerLink]="['/add-rotas   ']">
+    <div class='add-button' [routerLink]="['/add-rota']">
        <mat-icon aria-hidden="true" fontIcon="add"></mat-icon>
     </div>
  </div>

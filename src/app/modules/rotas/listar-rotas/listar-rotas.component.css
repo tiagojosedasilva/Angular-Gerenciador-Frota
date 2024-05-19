@@ -41,12 +41,12 @@ img{
     border-radius: 100%;
     background-color:white;
 }
-.card-usuarios{
+.card-rotas{
     display: flex;
     /* flex-direction: row; */
     /* justify-content: space-between; */
 }
-.usuarios{
+.rotas{
     display: flex;
 }
 .add{

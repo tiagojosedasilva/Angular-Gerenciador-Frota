@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule } from '@angular/router';
+import { UsuariosModule } from '../usuarios/usuarios.module';
 
 @NgModule({
   declarations: [],
@@ -18,6 +19,7 @@ import { RouterOutlet, RouterModule } from '@angular/router';
     CommonModule,
     MapaComponent,
     AddRotaComponent,
+    UsuariosModule
   ]
 })
 export class RotasModule { }

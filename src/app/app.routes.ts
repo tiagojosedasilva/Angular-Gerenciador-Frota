@@ -82,7 +82,7 @@ export const routes: Routes = [
         component: ListarRotasComponent
     },
     {
-        path: 'editar-rotas',
+        path: 'editar-rotas/:id',
         component: EditarRotaComponent
     },
     {

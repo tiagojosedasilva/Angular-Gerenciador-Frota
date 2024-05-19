@@ -17,14 +17,14 @@ import { Observable } from 'rxjs';
 })
 export class ListarRotasComponent implements OnInit{
   
-  rotas = new Observable<IRota[]>;
+  rotas: any = new Observable<IRota[]>;
   
   constructor(
     private readonly rotasService: RotasService
   ){}
 
-  ngOnInit(): void {
-    this.obterTodos()
+  async ngOnInit(){
+   await this.obterTodos()
   }
 
   async obterTodos(){
@@ -32,8 +32,8 @@ export class ListarRotasComponent implements OnInit{
     return this.rotas
   }
 
-  excluirRota(id: number){
-    this.rotasService.excluirRota(id).subscribe(() => alert("Rota Excluida com sucesso!"))
-    this.ngOnInit()
+  async excluirRota(id: number){
+    await this.rotasService.excluirRota(id).subscribe(() => alert("Rota Excluida com sucesso!"))
+    return this.ngOnInit()
   }
 }

@@ -14,9 +14,15 @@ import { IRota } from '../interface/IRota';
   templateUrl: './add-rota.component.html',
   styleUrl: './add-rota.component.css'
 })
-export class AddRotaComponent{
+export class AddRotaComponent {
+// export class AddRotaComponent implements OnInit{
   
   constructor(private readonly rotasService: RotasService){}
+
+
+  // ngOnInit(): void {
+  //   throw new Error('Method not implemented.');
+  // }
 
 
   rota: IRota = {
