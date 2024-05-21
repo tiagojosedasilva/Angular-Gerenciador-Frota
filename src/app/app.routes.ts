@@ -21,8 +21,13 @@ import { EditarConsumoComponent } from './modules/consumo/editar-consumo/editar-
 import { AddChamadosComponent } from './modules/chamados/add-chamados/add-chamados.component';
 import { EditarChamadosComponent } from './modules/chamados/editar-chamados/editar-chamados.component';
 import { ListarChamadosComponent } from './modules/chamados/listar-chamados/listar-chamados.component';
+import { authGuardGuard } from './auth/auth-guard.guard';
 
 export const routes: Routes = [
+    // {
+    //     path: '',
+    //     redirectTo: 'login'
+    // },
     {
         path: 'login',
         component: LoginComponent
@@ -37,6 +42,7 @@ export const routes: Routes = [
     },
     {
         path: 'usuarios',
+        canActivate: [authGuardGuard],
         // redirectTo: "usuarios",
         component: UsuariosComponent
     },
@@ -116,5 +122,9 @@ export const routes: Routes = [
     {
         path: 'listar-chamados',
         component: ListarChamadosComponent
+    },
+    {
+        path: '**',
+        redirectTo: 'login'
     },
 ];
