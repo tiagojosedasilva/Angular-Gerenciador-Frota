@@ -3,5 +3,5 @@ import { CanActivateFn } from '@angular/router';
 export const authGuardGuard: CanActivateFn = (route, state) => {
 
 
-  return false;
+  return true;
 };
