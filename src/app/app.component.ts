@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterModule, RouterOutlet, Routes } from '@angular/router';
+import { Router, RouterLink, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { UsuariosComponent } from './modules/usuarios/listar-usuarios/usuarios.component';
 import { VeiculosComponent } from './modules/veiculos/listar-veiculos/veiculos.component';
@@ -36,14 +36,21 @@ import { VeiculoModule } from './modules/veiculos/veiculo.module';
 
 })
 export class AppComponent implements OnInit {
-[x: string]: any;
+  [x: string]: any;
   navData = navbarData;
   visible = false;
-
+  
   ngOnInit() {
   }
 
   toggleDisplay(){
     this.visible = !this.visible
   }
+
+  // @if (!autenticado) {
+  //   this.result = false
+  // }else{
+  //   this.result = true
+  // }
+
 }

@@ -1,15 +1,18 @@
-<div class="container">
+<!-- <div class="container">
+ 
+</div> -->
+<form (ngSubmit)="submit()" class="container" #form="ngForm">
     <h2>Login</h2>
     <div>
         <div class="input">
             <p>Email:</p>
-            <input type="text">
+            <input type="text" [(ngModel)]="login.email" name="login.email" required>
         </div>
         <div class="input">
             <p>Password:</p>
-            <input type="text">
+            <input type="text" [(ngModel)]="login.senha" name="login.password" required>
         </div>
     </div>
-    <p>Esqueci minha senha</p>
-    <button>Entrar</button>
-</div>
+    <p [routerLink]="['/cadastre-se']">Cadastre-se</p>
+    <button type="submit" >Entrar</button>
+</form>

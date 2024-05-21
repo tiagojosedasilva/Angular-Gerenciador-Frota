@@ -22,6 +22,8 @@ import { AddChamadosComponent } from './modules/chamados/add-chamados/add-chamad
 import { EditarChamadosComponent } from './modules/chamados/editar-chamados/editar-chamados.component';
 import { ListarChamadosComponent } from './modules/chamados/listar-chamados/listar-chamados.component';
 import { authGuardGuard } from './auth/auth-guard.guard';
+import { ListarRevisoesComponent } from './modules/revisoes/listar-revisoes/listar-revisoes.component';
+import { ListarVinculosComponent } from './modules/vinculos/listar-vinculos/listar-vinculos.component';
 
 export const routes: Routes = [
     // {
@@ -42,89 +44,123 @@ export const routes: Routes = [
     },
     {
         path: 'usuarios',
-        canActivate: [authGuardGuard],
+        // canActivate: [authGuardGuard],
         // redirectTo: "usuarios",
         component: UsuariosComponent
     },
     {
         path: 'add-usuarios',
-        // redirectTo: "usuarios",
+        // redirectTo: "usuarios",,
+        canActivate: [authGuardGuard],
         component: AddUsuariosComponent
     },
     {
         path: "editar-usuarios/:id",
-        component: EditarUsuariosComponent
+        component: EditarUsuariosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: "mostrar-usuario/:id",
-        component: MostrarUsuarioComponent
+        component: MostrarUsuarioComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: "veiculos",
-        component: VeiculosComponent
+        component: VeiculosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path:'add-veiculos',
-        component: AddVeiculosComponent
+        component: AddVeiculosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'editar-veiculo/:id',
-        component: EditarVeiculosComponent
+        component: EditarVeiculosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'mostrar-veiculo/:id',
-        component: MostrarVeiculoComponent
+        component: MostrarVeiculoComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'mapa',
-        component: MapaComponent
+        component: MapaComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'add-rota',
-        component: AddRotaComponent
+        component: AddRotaComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'listar-rotas',
-        component: ListarRotasComponent
+        component: ListarRotasComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'editar-rotas/:id',
-        component: EditarRotaComponent
+        component: EditarRotaComponent,
+        canActivate: [authGuardGuard],
+    },
+    {
+        path: 'mostrar-rota/:id',
+        component: EditarRotaComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'exibir-rota',
-        component: ExibirRotaComponent
+        component: ExibirRotaComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'listar-consumos',
-        component: ListarComponent
+        component: ListarComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'add-consumo',
-        component: AddConsumoComponent
+        component: AddConsumoComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'add-consumo',
-        component: EditarConsumoComponent
+        component: EditarConsumoComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'add-consumo',
-        component: EditarConsumoComponent
+        component: EditarConsumoComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'add-chamado',
-        component: AddChamadosComponent
+        component: AddChamadosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'editar-chamado',
-        component: EditarChamadosComponent
+        component: EditarChamadosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: 'listar-chamados',
-        component: ListarChamadosComponent
+        component: ListarChamadosComponent,
+        canActivate: [authGuardGuard],
+    },
+    {
+        path: 'listar-revisoes',
+        component: ListarRevisoesComponent,
+        canActivate: [authGuardGuard],
+    },
+    {
+        path: 'listar-vinculos',
+        component: ListarVinculosComponent,
+        canActivate: [authGuardGuard],
     },
     {
         path: '**',
-        redirectTo: 'login'
+        redirectTo: 'login',
     },
 ];
