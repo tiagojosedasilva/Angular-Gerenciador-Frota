@@ -6,7 +6,7 @@
     <h3>FrotHub</h3>
   </div>
   <div class="search">
-    <div *ngIf="login">
+    <div *ngIf="login && !login">
       <input type="text">
     </div>
   </div>
@@ -28,8 +28,8 @@
     </div>
   </div>
 </div>
-<div class="corpo">
-  <div [hidden]="!visible" class="sidenav">
+<div class="corpo" >
+  <div [hidden]="!visible" class="sidenav" *ngIf="login">
     <ul >
       <li>
         <a [routerLink]="['/usuarios']">

@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { EditarUsuariosComponent } from './modules/usuarios/editar-usuarios/editar-usuarios.component';
 import { UsuariosModule } from './modules/usuarios/usuarios.module';
 import { VeiculoModule } from './modules/veiculos/veiculo.module';
+import { httpInterceptorsProviders } from './auth/http-interceptors';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,9 @@ import { VeiculoModule } from './modules/veiculos/veiculo.module';
     VeiculoModule,
     EditarUsuariosComponent
   ],
+  providers: [
+    httpInterceptorsProviders
+  ]
 
 })
 export class AppComponent implements OnInit, OnChanges {
@@ -41,6 +45,7 @@ export class AppComponent implements OnInit, OnChanges {
   navData = navbarData;
   visible = false;
   login = false;
+  
   
   async ngOnInit() {
     this.login
@@ -58,13 +63,13 @@ export class AppComponent implements OnInit, OnChanges {
   }
   
   autenticado(){
-    const storage = window.localStorage.getItem('token') ? window.localStorage.getItem('token') : null
+    const storage = window.localStorage.getItem('token') ? window.localStorage.getItem('token') : null 
     if (storage) {
       this.login = true;
     }else{
       this.login = false;
     }
-    // return this.ngOnInit()
+    this.ngOnInit()
   }
   
   toggleDisplay(){

@@ -8,6 +8,7 @@ import { UsuariosService } from './usuarios.service';
 import { IUsuarios } from './IUsuarios';
 import { error } from 'node:console';
 import { Observable } from 'rxjs';
+import { AppComponent } from '../../../app.component';
 
 @Component({
   selector: 'app-usuarios',
@@ -23,11 +24,14 @@ export class UsuariosComponent implements OnInit {
 
   constructor(
     private usuariosService: UsuariosService,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private app : AppComponent
   ){}
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.obterTodos();
+    // let  reload: AppComponent = new AppComponent()
+    return await this.app.ngOnInit()
   }
 
   obterTodos(){
