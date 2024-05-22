@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, IterableChanges, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
@@ -35,22 +35,40 @@ import { VeiculoModule } from './modules/veiculos/veiculo.module';
   ],
 
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnChanges {
+
   [x: string]: any;
   navData = navbarData;
   visible = false;
+  login = false;
   
-  ngOnInit() {
+  async ngOnInit() {
+    this.login
+    return await this.autenticado()
   }
-
+  
+  async ngOnChanges(){
+    this.login
+    return await this.ngOnInit() 
+  }
+  
+  async sair(){
+    window.localStorage.clear()
+    return await this.ngOnInit()
+  }
+  
+  autenticado(){
+    const storage = window.localStorage.getItem('token') ? window.localStorage.getItem('token') : null
+    if (storage) {
+      this.login = true;
+    }else{
+      this.login = false;
+    }
+    // return this.ngOnInit()
+  }
+  
   toggleDisplay(){
     this.visible = !this.visible
   }
-
-  // @if (!autenticado) {
-  //   this.result = false
-  // }else{
-  //   this.result = true
-  // }
 
 }

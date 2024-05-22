@@ -11,13 +11,6 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  // login(user: any){
-  //   return new Promise((resolve) => {
-  //     window.localStorage.setItem('token', 'meu-token');
-  //     resolve(true);
-  //   })
-  // }
-
   async login(user: any){
     try {
       const result = await this.http.post<any>(`${environment.url}auth/login`, user).toPromise();
@@ -31,15 +24,14 @@ export class AuthService {
     }
   }
 
-  // createAccount(account: any){
-  //   return new Promise((resolve) => {
-  //     resolve(true)
-  //   })
-  // }
-
   async createAccount(account: any){
     let result = await this.http.post<any>(`${environment.url}usuario`, account).toPromise();
     result = this.login(account)
     return result;
+  }
+
+  getAuthorizationToken(){
+    const token  = window.localStorage.getItem('token');
+    return token;
   }
 }

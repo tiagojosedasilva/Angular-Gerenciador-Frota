@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
 
   login = {
     email: '',
@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit{
       }
       else if (result === true){
         this.router.navigate(['usuarios'])
+        
       }
     } catch (error) {
       console.log(error)

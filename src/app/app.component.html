@@ -1,20 +1,31 @@
 <div class="container-nav">
   <div class="logo">
-    <button (click)="toggleDisplay()" type="menu"><mat-icon aria-hidden="true" fontIcon="menu"></mat-icon></button>
+    <div *ngIf="login">
+      <button (click)="toggleDisplay()" type="menu"><mat-icon aria-hidden="true" fontIcon="menu"></mat-icon></button>
+    </div>
     <h3>FrotHub</h3>
   </div>
   <div class="search">
-    <input type="text">
+    <div *ngIf="login">
+      <input type="text">
+    </div>
   </div>
   <div class="perfil">
-    <button class="button"  mat-button [matMenuTriggerFor]="menu">
-      <!-- <mat-icon aria-hidden="true" fontIcon="account">account_circle</mat-icon> -->
-      <mat-icon aria-hidden="false" class="person">person</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button class="button" mat-menu-item>Configurações</button>
-      <button class="button" mat-menu-item [routerLink]="['login']">Sair</button>
-    </mat-menu>
+    <div *ngIf="login">
+      <button class="button"  mat-button [matMenuTriggerFor]="menu">
+        <!-- <mat-icon aria-hidden="true" fontIcon="account">account_circle</mat-icon> -->
+        <mat-icon aria-hidden="false" class="person">person</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button class="button" mat-menu-item>Configurações</button>
+        <button class="button" mat-menu-item [routerLink]="['login']" (click)="sair()">Sair</button>
+        <!-- <button class="button" mat-menu-item (click)="sair()">Sair</button> -->
+      </mat-menu>
+    </div>
+    <div *ngIf="!login">
+      <a [routerLink]="['/login']">Entrar</a>
+      <a [routerLink]="['/cadastre-se']">Cadastrar</a>
+    </div>
   </div>
 </div>
 <div class="corpo">

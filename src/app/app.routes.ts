@@ -44,7 +44,7 @@ export const routes: Routes = [
     },
     {
         path: 'usuarios',
-        // canActivate: [authGuardGuard],
+        canActivate: [authGuardGuard],
         // redirectTo: "usuarios",
         component: UsuariosComponent
     },
