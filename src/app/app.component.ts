@@ -35,7 +35,7 @@ import { httpInterceptorsProviders } from './auth/http-interceptors';
     EditarUsuariosComponent
   ],
   providers: [
-    httpInterceptorsProviders
+    // httpInterceptorsProviders
   ]
 
 })
