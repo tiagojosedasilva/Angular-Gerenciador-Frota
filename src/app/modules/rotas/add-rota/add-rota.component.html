@@ -41,8 +41,15 @@
                 <input type="text" [(ngModel)]="rota.referencia" name="rota.referencia">
             </div>
             <div class="item">
-                <p>Condutor:</p>
-                <input type="text" [(ngModel)]="rota.idCondutor" name="rota.idCondutor">
+                <p>Condutor:</p>                
+                <mat-form-field class="">
+                    <!-- <input type="text" [(ngModel)]="rota.idCondutor" name="rota.idCondutor"> -->
+                    <mat-select class="select" [(ngModel)]="rota.idCondutor" name="rota.idCondutor">
+                        @for (usuario of usuarios; track usuario.id) {
+                          <mat-option [value]="usuario.id">{{usuario.nome}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
             </div>
         </div>
         <div class="textarea">

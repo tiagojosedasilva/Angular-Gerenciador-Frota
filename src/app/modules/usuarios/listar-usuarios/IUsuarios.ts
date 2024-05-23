@@ -1,5 +1,5 @@
 export interface IUsuarios{
-   
+       
     id: string;
 
     nome: string | null;

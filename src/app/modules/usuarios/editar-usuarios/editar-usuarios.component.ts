@@ -4,14 +4,17 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule, ActivatedRoute } from '@angular/router';
-import { IUsuarios } from '../listar-usuarios/IUsuarios';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 import { EditarUsuariosService } from './editar-usuarios.service';
-import { Observable, Observer, Operator, Subscription } from 'rxjs';
+import { VeiculoService } from '../../veiculos/listar-veiculos/veiculos.service';
+
 
 @Component({
   selector: 'app-editar-usuarios',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule, RouterModule, MatIconModule, HttpClientModule,],
+  imports: [CommonModule, RouterOutlet, HttpClientModule, FormsModule, RouterModule, MatIconModule, MatFormFieldModule, MatSelectModule, MatInputModule],
   providers: [EditarUsuariosService],
   templateUrl: './editar-usuarios.component.html',
   styleUrl: './editar-usuarios.component.css'
@@ -20,13 +23,20 @@ export class EditarUsuariosComponent implements OnInit{
 
   id: any = '';
   usuario: any = ''
-  constructor(private editarUsuarioService: EditarUsuariosService, private activatedRoute : ActivatedRoute){}
+  carros: any
+
+  constructor(
+    private editarUsuarioService: EditarUsuariosService, 
+    private activatedRoute : ActivatedRoute,
+    private veiculosService: VeiculoService,
+  ){}
   
   async ngOnInit() {
     this.activatedRoute.paramMap.subscribe(param => {
       this.id = param.get('id');
     })
     this.usuario = await this.editarUsuarioService.buscarUsuario(this.id).toPromise()
+    this.carros = await this.veiculosService.obterTodos().toPromise()
     // console.log(this.usuario)
   }
 

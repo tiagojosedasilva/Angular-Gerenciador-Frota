@@ -7,17 +7,32 @@ import { RouterOutlet, RouterModule } from '@angular/router';
 import { IUsuarios } from '../listar-usuarios/IUsuarios';
 import { AddUsuariosService } from './add-usuarios.service';
 import { AddUsuarios } from './add-usuario.dto';
+import { VeiculoService } from '../../veiculos/veiculos.service';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { UsuariosService } from '../../usuarios/listar-usuarios/usuarios.service';
+
 
 @Component({
   selector: 'app-add-usuarios',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HttpClientModule, FormsModule, RouterModule, MatIconModule],
+  imports: [CommonModule, RouterOutlet, HttpClientModule, FormsModule, RouterModule, MatIconModule, MatFormFieldModule, MatSelectModule, MatInputModule],
   templateUrl: './add-usuarios.component.html',
   styleUrl: './add-usuarios.component.css'
 })
-export class AddUsuariosComponent {
+export class AddUsuariosComponent implements OnInit{
 
-  constructor(private addUsuarioService: AddUsuariosService){}
+  carros: any
+
+  constructor(
+    private addUsuarioService: AddUsuariosService,
+    private veiculosService: VeiculoService,
+  ){}
+
+  async ngOnInit(){
+    this.carros = await this.veiculosService.obterTodos().toPromise()
+  }
 
   usuario: AddUsuarios = {
     nome: '',

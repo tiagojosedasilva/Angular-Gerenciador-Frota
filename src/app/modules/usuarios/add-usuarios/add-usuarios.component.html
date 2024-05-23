@@ -79,7 +79,15 @@
             </div>
             <div class="item">
                 <p>Veículo:</p>
-                <input type="text" [(ngModel)]="usuario.idVeiculo" name="usuario.idVeiculo">
+                <!-- <input type="text" [(ngModel)]="usuario.idVeiculo" name="usuario.idVeiculo"> -->
+                <mat-form-field class="select">
+                    <!-- <input type="text" [(ngModel)]="rota.idCondutor" name="rota.idCondutor"> -->
+                    <mat-select class="" [(ngModel)]="usuario.idVeiculo" name="usuario.idVeiculo">
+                        @for (carro of carros; track carro.id) {
+                          <mat-option [value]="carro.id">{{carro.placa}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
             </div>
         </div> 
         <div class="titulo">

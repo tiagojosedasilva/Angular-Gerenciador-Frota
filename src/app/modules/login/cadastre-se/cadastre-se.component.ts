@@ -69,7 +69,7 @@ export class CadastreSeComponent implements OnInit{
         digitoVerificador: '',
         tipo: '',
         nomeEmergencia: '',
-        telefoneEmergencia: ''
+        telefoneEmergencia: '',
       }
       const result = await this.accountService.createAccount(novoUsuario);
       this.router.navigate(['usuarios'])

@@ -25,13 +25,11 @@ input{
     background-color: #bcbcdd;
     border: none;
     margin: 5px;
-    border: none;
     width: 180px;
 }
 input:hover, :focus{
     border: none;
     /* width: px; */
-    margin:  5px 5px 5px 5px;
     transition: 0.3s;
     background-color: white;
 }
@@ -103,4 +101,12 @@ textarea:hover, :focus{
     /* display: flex; */
     /* justify-content: center; */
     width: 100%;
+}
+
+.select{
+    display: flex;
+    padding: 10px;
+    /* flex-direction: row; */
+    margin: 0;
+    height: 10px !important;
 }
